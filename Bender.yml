@@ -18,10 +18,12 @@ dependencies:
 sources:
   # pulp_soc
   - include_dirs:
-      - rtl/include
+      - ./ 
     files:
       - sv/wide_alu_reg_pkg.sv
       - sv/wide_alu_reg_top.sv
       - wide_alu_pkg.sv
       - wide_alu.sv
       - wide_alu_top.sv
+    vlog-args:
+      - -L register_interface_lib
